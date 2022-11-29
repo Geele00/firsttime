@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-size: 25px;
+}
+
+body {
+    min-height: 100px;
+    background-color: limegreen;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; 
+  padding: 1rem 0.5rem;
+}
+
+section {
+    /* width: 100%;
+    max-width: 490px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    padding: 7rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+a, a:visited {
+    color: #fff;
+}
+
+input[type="text"],
+button,
+textarea {
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+label,
+button {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+}
+
+
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.titles{
+  left: 80px;
+  text-decoration: underline;
+  position: fixed;
+  text-underline-position: under;
+  font-size: xx-large;
+}
+
+.Navbar{
+  top: 5px;
+  display: flex;
+  margin-left: 50px;
+}
+
+
+ul li {
+display: flex;
+}
+
+.profileTitle{
+  flex: auto;
+}
+
+.header{
+  position: absolute;
+  top: 250px;
+  font-size: xx-large;
+  text-decoration: underline white;
+}
+
+.history{
+  float: left;
+}
+
+.button{
+  display: flex;
+}
+
+.NavbarProfile{
+  margin: 10px;
 }

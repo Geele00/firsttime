@@ -1,0 +1,48 @@
+import { createHeaders } from "./Index";
+
+const apiUrl = process.env.REACT_APP_API_KEY_URL
+
+//Updates the existing data in the API
+export const translationAdd = async (user, translations) => {
+    try {
+        const response = await fetch(`${apiUrl}/${user.id}`, {
+            method: 'PATCH',
+            headers: createHeaders(),
+            body: JSON.stringify({
+                translations: [...user.translations, translations]
+            })
+        })
+
+
+
+        if (!response.ok) {
+            throw new Error('Could not update the translation')
+        }
+
+        const result = await response.json()
+        return [null, result]
+
+    } catch (error) {
+        return [error.message, null]
+    }
+}
+
+export const translationClearHistory = async (userId) => {
+    try {
+        const response = await fetch(`${apiUrl}/${userId}`, {
+            method: 'PATCH',
+            headers: createHeaders(),
+            body: JSON.stringify({
+                translations: []
+            })
+        })
+        if (!response.ok) {
+            throw new Error('Could not update translations')
+        }
+        const result = await response.json()
+        return [null, result]
+
+    } catch (error) {
+        return [error.message, null]
+    }
+}
